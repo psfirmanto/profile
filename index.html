@@ -6,16 +6,178 @@
 <title>Paulus S. Firmanto | Business Leader & Strategic Advisor</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css"></head><body>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ===== PSF WEBSITE: TYPOGRAPHY, BANNER & RESPONSIVE REFINEMENT ===== */
+:root { --psf-navy:#101d32; --psf-gold:#d3a16b; }
+html { scroll-padding-top: 88px; }
+body { font-size:17px; line-height:1.75; }
+.container { width:min(1240px, calc(100% - 64px)); }
+.header { min-height:82px; height:auto; padding-left:max(32px,calc((100vw - 1240px)/2)); padding-right:max(32px,calc((100vw - 1240px)/2)); }
+.brand { font-size:14px; gap:12px; }
+.brand b { padding:10px 11px; font-size:15px; }
+.header nav { gap:30px; font-size:14px; }
+.navcta { padding:11px 16px; }
+
+/* Banner artwork is the actual hero visual. Text sits in the open right-hand area. */
+.hero { background:var(--psf-navy); color:#fff; padding:0; min-height:0; overflow:hidden; }
+.hero:after { display:none; }
+.hero-banner { position:relative; width:100%; min-height: min(48vw, 700px); background:#dce7f1; overflow:hidden; }
+.hero-banner > img { display:block; width:100%; height:100%; min-height:min(48vw,700px); object-fit:cover; object-position:center center; }
+.hero-content { position:absolute; top:50%; right:max(5.5%,calc((100vw - 1240px)/2)); transform:translateY(-50%); width:min(57%,760px); color:#12223b; z-index:1; }
+.hero .eyebrow { color:#a66f38; font-size:13px; letter-spacing:2.3px; margin-bottom:20px; }
+.hero h1 { font-size:clamp(54px,5.2vw,82px); line-height:1.03; letter-spacing:-3.5px; margin:0 0 22px; color:#12223b; }
+.hero h1 em { color:#b77c43; }
+.hero .sub { color:#263c58; font-size:18px; font-weight:600; line-height:1.6; }
+.hero .sub i { color:#b77c43; margin:0 10px; }
+.hero-copy { max-width:690px; color:#34445a; font-size:19px; line-height:1.7; margin:24px 0 30px; }
+.hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap:22px; }
+.hero .button { padding:16px 22px; font-size:15px; }
+.hero .plainlink { font-size:15px; margin:0; color:#24364f; font-weight:700; }
+.hero-foot { display:flex; flex-wrap:wrap; gap:22px 38px; border-top:1px solid #8a9db0; padding-top:16px; margin-top:38px; color:#45566b; font-size:11px; letter-spacing:1.5px; font-weight:700; }
+
+/* Larger, more comfortable reading sizes throughout the site */
+.section { padding:112px 0; }
+.eyebrow, .dark .eyebrow, .eyebrow.dark { font-size:12px; letter-spacing:2px; }
+.section h2 { font-size:clamp(40px,4.2vw,60px); }
+.copy { font-size:17px; line-height:1.8; }
+.lead { font-size:22px; line-height:1.55; }
+.under { font-size:15px; }
+.stats { margin-top:82px; padding-top:32px; }
+.stats strong { font-size:40px; }
+.stats small { font-size:13px; }
+.heading { margin-bottom:52px; }
+.heading>p { font-size:16px; line-height:1.7; }
+.cards article { padding:30px; min-height:250px; }
+.cards small { font-size:13px; }
+.cards b { font-size:30px; }
+.cards h3 { font-size:20px; }
+.cards p { font-size:15px; line-height:1.7; }
+.timeline article { grid-template-columns:210px 1fr; gap:52px; padding:38px 0; }
+.timeline time { font-size:13px; }
+.timeline label, .books label { font-size:11px; }
+.timeline h3 { font-size:23px; }
+.timeline p, .timeline ul { font-size:15px; line-height:1.8; }
+.timeline li { padding:4px 0; }
+.timeline aside { font-size:14px; line-height:1.7; }
+.pills span { font-size:13px; padding:9px 13px; }
+.books { gap:42px 28px; }
+.books article img { height:300px; }
+.books h3 { font-size:18px; }
+.books p { font-size:14px; line-height:1.65; }
+.note { font-size:14px; }
+.topics span { font-size:14px; }
+.contactcopy { font-size:17px; line-height:1.75; }
+.contactbox { padding:36px; }
+.contactbox label { font-size:11px; }
+.email { font-size:28px; }
+.contactbox p { font-size:14px; padding:15px 0; }
+.foot b { font-size:13px; }
+.foot span, .foot small { font-size:12px; }
+
+@media (max-width:900px) {
+  .header { padding-left:24px; padding-right:24px; }
+  .header nav { gap:16px; }
+  .hero-banner, .hero-banner>img { min-height:500px; }
+  .hero-content { right:4%; width:58%; }
+  .hero h1 { font-size:clamp(48px,6.3vw,64px); }
+  .hero-copy { font-size:17px; }
+  .twocol { gap:48px; }
+  .timeline article { grid-template-columns:170px 1fr; gap:30px; }
+  .books { grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width:650px) {
+  body { font-size:16px; line-height:1.75; }
+  .container { width:calc(100% - 40px); }
+  .header { height:70px; min-height:70px; padding:0 20px; }
+  .brand { font-size:12px; letter-spacing:1px; }
+  .brand b { padding:9px; font-size:13px; }
+  .toggle { display:block; border:1px solid #dce1e7; border-radius:5px; padding:7px 11px; color:#17243a; font-size:23px; line-height:1; }
+  .header nav { display:none; position:absolute; top:70px; left:0; right:0; background:#fff; padding:12px 20px 18px; box-shadow:0 12px 24px #15243a20; flex-direction:column; align-items:stretch; gap:0; }
+  .header nav.open { display:flex; }
+  .header nav a { padding:13px 8px; border-bottom:1px solid #edf0f3; font-size:15px; }
+  .header nav .navcta { border:0; padding:13px 8px; }
+  .hero-banner { min-height:0; background:var(--psf-navy); }
+  .hero-banner>img { width:100%; height:auto; min-height:0; aspect-ratio:3 / 1; object-fit:cover; object-position:22% center; }
+  .hero-content { position:relative; top:auto; right:auto; transform:none; width:100%; padding:34px 22px 28px; background:var(--psf-navy); color:#fff; }
+  .hero .eyebrow { color:#e0ad75; font-size:11px; letter-spacing:1.7px; margin-bottom:16px; }
+  .hero h1 { color:#fff; font-size:clamp(42px,11vw,56px); line-height:1.08; letter-spacing:-2px; margin-bottom:18px; }
+  .hero h1 em { color:#e0ad75; }
+  .hero .sub { color:#e1e7ef; font-size:15px; line-height:1.7; }
+  .hero .sub i { margin:0 5px; }
+  .hero-copy { color:#c4cedb; font-size:16px; line-height:1.75; margin:20px 0 24px; }
+  .hero-actions { gap:16px; align-items:flex-start; flex-direction:column; }
+  .hero .button { padding:14px 18px; font-size:14px; }
+  .hero .plainlink { color:#f1f4f8; font-size:14px; margin:0; }
+  .hero-foot { gap:12px 20px; margin-top:30px; padding-top:15px; border-color:#43516a; }
+  .hero-foot span { color:#aebacc; font-size:9px; letter-spacing:1px; }
+  .section { padding:76px 0; }
+  .eyebrow, .dark .eyebrow, .eyebrow.dark { font-size:11px; }
+  .twocol { grid-template-columns:1fr; gap:26px; }
+  .section h2 { font-size:clamp(35px,9vw,44px); line-height:1.13; letter-spacing:-1.5px; }
+  .copy { font-size:16px; }
+  .lead { font-size:19px; }
+  .under { font-size:14px; }
+  .stats { grid-template-columns:1fr 1fr; gap:22px 12px; margin-top:48px; padding-top:24px; }
+  .stats div { border:0; padding:0; align-items:flex-start; flex-direction:column; gap:4px; }
+  .stats strong { font-size:34px; }
+  .stats small { font-size:12px; }
+  .heading { display:block; margin-bottom:30px; }
+  .heading>p { font-size:15px; margin-top:14px; }
+  .cards { grid-template-columns:1fr; }
+  .cards article { min-height:0; padding:23px; }
+  .cards b { margin:8px 0 14px; }
+  .cards h3 { font-size:19px; }
+  .cards p { font-size:15px; }
+  .timeline article { grid-template-columns:1fr; gap:9px; padding:27px 0; }
+  .timeline time { font-size:12px; }
+  .timeline h3 { font-size:20px; }
+  .timeline p, .timeline ul { font-size:15px; }
+  .books { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 16px; }
+  .books article img { height:220px; padding:8px; }
+  .books label { font-size:9px; line-height:1.5; }
+  .books h3 { font-size:15px; }
+  .books p { font-size:13px; }
+  .note { font-size:13px; line-height:1.7; }
+  .topics { grid-template-columns:1fr; gap:8px; }
+  .topics span { font-size:14px; }
+  .contactcopy { font-size:16px; }
+  .contactbox { padding:24px 18px; }
+  .email { font-size:clamp(18px,5vw,23px); overflow-wrap:anywhere; }
+  .contactbox p { align-items:flex-start; flex-direction:column; gap:4px; font-size:13px; }
+  .foot { align-items:flex-start; flex-direction:column; gap:10px; }
+  .foot b { font-size:12px; }
+  .foot span, .foot small { font-size:11px; line-height:1.6; }
+}
+@media (max-width:380px) {
+  .container { width:calc(100% - 32px); }
+  .hero-content { padding-left:18px; padding-right:18px; }
+  .hero h1 { font-size:40px; }
+  .books article img { height:190px; }
+  .books h3 { font-size:14px; }
+}
+</style>
+</head><body>
 <header class="header"><a class="brand" href="#home"><b>PSF</b> PAULUS S. FIRMANTO</a>
 <button class="toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 <nav><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#books">Books</a><a href="#perspective">Perspective</a><a class="navcta" href="#contact">Let's Connect ↗</a></nav></header>
 <main>
-<section class="hero" id="home"><div class="container"><p class="eyebrow">BUSINESS LEADER · STRATEGIC ADVISOR · AUTHOR</p>
-<h1>Building businesses<br><em>that move forward.</em></h1><p class="sub">Automotive & Mobility <i>•</i> Business Transformation <i>•</i> Distribution Strategy</p>
-<p class="hero-copy">More than 30 years of experience connecting market understanding, commercial strategy, organizational capability, and disciplined execution to build sustainable business growth.</p>
-<a class="button light" href="#experience">Explore my journey ↘</a><a class="plainlink" href="#books">Discover my books ↗</a>
-<div class="hero-foot"><span>JAKARTA, INDONESIA</span><span>30+ YEARS OF EXPERIENCE</span><span>7 PUBLISHED TITLES</span></div></div></section>
+<section class="hero" id="home">
+  <div class="hero-banner">
+    <img src="assets/banner_website.png" alt="Paulus S. Firmanto — professional banner">
+    <div class="hero-content">
+      <p class="eyebrow">BUSINESS LEADER · STRATEGIC ADVISOR · AUTHOR</p>
+      <h1>Building businesses<br><em>that move forward.</em></h1>
+      <p class="sub">Automotive &amp; Mobility <i>•</i> Business Transformation <i>•</i> Distribution Strategy</p>
+      <p class="hero-copy">More than 30 years of experience connecting market understanding, commercial strategy, organizational capability, and disciplined execution to build sustainable business growth.</p>
+      <div class="hero-actions">
+        <a class="button light" href="#experience">Explore my journey ↘</a>
+        <a class="plainlink" href="#books">Discover my books ↗</a>
+      </div>
+      <div class="hero-foot"><span>JAKARTA, INDONESIA</span><span>30+ YEARS OF EXPERIENCE</span><span>7 PUBLISHED TITLES</span></div>
+    </div>
+  </div>
+</section>
 <section class="section" id="about"><div class="container twocol"><div><p class="eyebrow dark">01 / ABOUT</p><h2>Experience across<br><em>markets and transformation.</em></h2></div><div class="copy"><p class="lead">I am a business leader and strategic advisor with a career spanning Indonesia's automotive, distribution, and business development sectors.</p><p>My professional journey includes senior leadership roles at Yamaha Motor Indonesia and Suzuki Indomobil Sales, entrepreneurial leadership, and advisory work with business owners and leadership teams.</p><p>I focus on understanding the real condition of a business, identifying the levers that matter, and translating strategy into practical action — with sustainable profitability as the destination.</p><a class="under" href="#contact">Start a conversation ↗</a></div></div>
 <div class="container stats"><div><strong>30+</strong><small>Years in business<br>& automotive</small></div><div><strong>1,000+</strong><small>Dealer & distribution<br>partners developed</small></div><div><strong>7</strong><small>Published book titles<br>featured here</small></div><div><strong>3</strong><small>Core arenas: strategy,<br>mobility & transformation</small></div></div></section>
 <section class="section soft" id="expertise"><div class="container"><p class="eyebrow dark">02 / WHAT I BRING</p><div class="heading"><h2>Turning insight<br><em>into business momentum.</em></h2><p>Connecting commercial ambition with the capabilities, partnerships, and execution needed to make it happen.</p></div><div class="cards">
