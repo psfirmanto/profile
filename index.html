@@ -1,211 +1,247 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101d32">
 <meta name="description" content="Paulus S. Firmanto — Business Leader, Automotive & Mobility, Business Transformation, Strategic Advisor and Author.">
 <title>Paulus S. Firmanto | Business Leader & Strategic Advisor</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
 <style>
-/* ===== PSF WEBSITE: TYPOGRAPHY, BANNER & RESPONSIVE REFINEMENT ===== */
-:root { --psf-navy:#101d32; --psf-gold:#d3a16b; }
-html { scroll-padding-top: 88px; }
-body { font-size:17px; line-height:1.75; }
-.container { width:min(1240px, calc(100% - 64px)); }
-.header { min-height:82px; height:auto; padding-left:max(32px,calc((100vw - 1240px)/2)); padding-right:max(32px,calc((100vw - 1240px)/2)); }
-.brand { font-size:14px; gap:12px; }
-.brand b { padding:10px 11px; font-size:15px; }
-.header nav { gap:30px; font-size:14px; }
-.navcta { padding:11px 16px; }
-
-/* Banner artwork is the actual hero visual. Text sits in the open right-hand area. */
-.hero { background:var(--psf-navy); color:#fff; padding:0; min-height:0; overflow:hidden; }
-.hero:after { display:none; }
-.hero-banner { position:relative; width:100%; min-height: min(48vw, 700px); background:#dce7f1; overflow:hidden; }
-.hero-banner > img { display:block; width:100%; height:100%; min-height:min(48vw,700px); object-fit:cover; object-position:center center; }
-.hero-content { position:absolute; top:50%; right:max(5.5%,calc((100vw - 1240px)/2)); transform:translateY(-50%); width:min(57%,760px); color:#12223b; z-index:1; }
-.hero .eyebrow { color:#a66f38; font-size:13px; letter-spacing:2.3px; margin-bottom:20px; }
-.hero h1 { font-size:clamp(54px,5.2vw,82px); line-height:1.03; letter-spacing:-3.5px; margin:0 0 22px; color:#12223b; }
-.hero h1 em { color:#b77c43; }
-.hero .sub { color:#263c58; font-size:18px; font-weight:600; line-height:1.6; }
-.hero .sub i { color:#b77c43; margin:0 10px; }
-.hero-copy { max-width:690px; color:#34445a; font-size:19px; line-height:1.7; margin:24px 0 30px; }
-.hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap:22px; }
-.hero .button { padding:16px 22px; font-size:15px; }
-.hero .plainlink { font-size:15px; margin:0; color:#24364f; font-weight:700; }
-.hero-foot { display:flex; flex-wrap:wrap; gap:22px 38px; border-top:1px solid #8a9db0; padding-top:16px; margin-top:38px; color:#45566b; font-size:11px; letter-spacing:1.5px; font-weight:700; }
-
-/* Larger, more comfortable reading sizes throughout the site */
-.section { padding:112px 0; }
-.eyebrow, .dark .eyebrow, .eyebrow.dark { font-size:12px; letter-spacing:2px; }
-.section h2 { font-size:clamp(40px,4.2vw,60px); }
-.copy { font-size:17px; line-height:1.8; }
-.lead { font-size:22px; line-height:1.55; }
-.under { font-size:15px; }
-.stats { margin-top:82px; padding-top:32px; }
-.stats strong { font-size:40px; }
-.stats small { font-size:13px; }
-.heading { margin-bottom:52px; }
-.heading>p { font-size:16px; line-height:1.7; }
-.cards article { padding:30px; min-height:250px; }
-.cards small { font-size:13px; }
-.cards b { font-size:30px; }
-.cards h3 { font-size:20px; }
-.cards p { font-size:15px; line-height:1.7; }
-.timeline article { grid-template-columns:210px 1fr; gap:52px; padding:38px 0; }
-.timeline time { font-size:13px; }
-.timeline label, .books label { font-size:11px; }
-.timeline h3 { font-size:23px; }
-.timeline p, .timeline ul { font-size:15px; line-height:1.8; }
-.timeline li { padding:4px 0; }
-.timeline aside { font-size:14px; line-height:1.7; }
-.pills span { font-size:13px; padding:9px 13px; }
-.books { gap:42px 28px; }
-.books article img { height:300px; }
-.books h3 { font-size:18px; }
-.books p { font-size:14px; line-height:1.65; }
-.note { font-size:14px; }
-.topics span { font-size:14px; }
-.contactcopy { font-size:17px; line-height:1.75; }
-.contactbox { padding:36px; }
-.contactbox label { font-size:11px; }
-.email { font-size:28px; }
-.contactbox p { font-size:14px; padding:15px 0; }
-.foot b { font-size:13px; }
-.foot span, .foot small { font-size:12px; }
-
-@media (max-width:900px) {
-  .header { padding-left:24px; padding-right:24px; }
-  .header nav { gap:16px; }
-  .hero-banner, .hero-banner>img { min-height:500px; }
-  .hero-content { right:4%; width:58%; }
-  .hero h1 { font-size:clamp(48px,6.3vw,64px); }
-  .hero-copy { font-size:17px; }
-  .twocol { gap:48px; }
-  .timeline article { grid-template-columns:170px 1fr; gap:30px; }
-  .books { grid-template-columns:repeat(3,1fr); }
+:root{--navy:#101d32;--navy2:#172943;--gold:#d3a16b;--ink:#17243a;--muted:#647084;--paper:#fff;--soft:#f4f6f8;--line:#dfe4ea}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;font-family:"DM Sans",Arial,sans-serif;font-size:18px;line-height:1.75;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1240px,calc(100% - 64px));margin:auto}
+.header{height:84px;position:sticky;top:0;z-index:50;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 max(32px,calc((100vw - 1240px)/2));box-shadow:0 2px 18px #14243a0b}
+.brand{display:flex;align-items:center;gap:12px;font:800 14px Manrope,sans-serif;letter-spacing:1.2px;white-space:nowrap}
+.brand b{display:grid;place-items:center;background:#bd8952;color:#fff;width:46px;height:46px;font-size:15px;letter-spacing:1px}
+.header nav{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700}
+.header nav a:hover{color:#b77c43}
+.navcta{border:1px solid var(--line);padding:11px 17px}
+.toggle{display:none;background:none;border:1px solid var(--line);border-radius:5px;padding:7px 11px;font-size:24px;color:var(--ink)}
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero-banner{position:relative;width:100%;min-height:min(48vw,700px);background:#dce7f1;overflow:hidden}
+.hero-banner>img{width:100%;height:100%;min-height:min(48vw,700px);object-fit:cover;object-position:center}
+.hero-content{position:absolute;top:50%;right:max(5.5%,calc((100vw - 1240px)/2));transform:translateY(-50%);width:min(57%,760px);color:#12223b}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:2px;color:#a66f38;margin:0 0 20px}
+.hero h1{font:800 clamp(54px,5.2vw,82px)/1.04 Manrope,sans-serif;letter-spacing:-3.5px;margin:0 0 22px;color:#12223b}
+h1 em,h2 em{font-style:normal;color:#b77c43}
+.sub{font-size:18px;font-weight:700;color:#263c58;line-height:1.6}
+.sub i{font-style:normal;color:#b77c43;margin:0 9px}
+.hero-copy{max-width:690px;color:#34445a;font-size:19px;line-height:1.7;margin:24px 0 30px}
+.hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px}
+.button{display:inline-block;padding:15px 22px;font-size:15px;font-weight:800}
+.button.light{background:#fff;color:#14243a}
+.plainlink{font-size:15px;font-weight:800;color:#24364f}
+.hero-foot{display:flex;flex-wrap:wrap;gap:18px 36px;border-top:1px solid #8a9db0;padding-top:16px;margin-top:38px;color:#45566b;font-size:11px;letter-spacing:1.4px;font-weight:800}
+.section{padding:108px 0}
+.soft{background:var(--soft)}
+.dark{background:var(--navy);color:#fff}
+.dark .eyebrow{color:#e0ad75}
+.twocol{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:start}
+h2{font:800 clamp(40px,4.2vw,60px)/1.12 Manrope,sans-serif;letter-spacing:-2px;margin:0}
+.copy{font-size:17px;line-height:1.85;color:#4e5b6e}
+.copy p{margin:0 0 20px}
+.lead{font-size:22px;line-height:1.58;color:inherit;font-weight:600}
+.under{display:inline-block;border-bottom:1px solid var(--gold);padding-bottom:4px;font-weight:800;font-size:15px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:78px;padding-top:30px;border-top:1px solid var(--line)}
+.stats div{display:flex;align-items:center;gap:14px}
+.stats strong{font:800 40px Manrope;color:#bd8952}
+.stats small{font-size:13px;line-height:1.5;color:var(--muted)}
+.heading{display:flex;justify-content:space-between;align-items:end;gap:50px;margin:18px 0 48px}
+.heading>p{max-width:430px;color:var(--muted);font-size:17px;line-height:1.75;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cards article{background:#fff;border:1px solid var(--line);padding:28px;min-height:250px}
+.cards small{font-size:12px;color:#a66f38;font-weight:800;letter-spacing:1px}
+.cards b{display:block;font-size:30px;color:#bd8952;margin:10px 0 16px}
+.cards h3{font:800 20px/1.35 Manrope;margin:0 0 12px}
+.cards p{font-size:15px;line-height:1.75;color:var(--muted);margin:0}
+.timeline article{display:grid;grid-template-columns:210px 1fr;gap:52px;padding:36px 0;border-top:1px solid var(--line)}
+.timeline time{font-size:13px;font-weight:800;color:#a66f38;letter-spacing:1px}
+.timeline time small{font-size:12px;color:var(--muted);letter-spacing:0}
+.timeline label,.books label{font-size:11px;font-weight:800;letter-spacing:1.6px;color:#a66f38}
+.timeline h3{font:800 23px/1.4 Manrope;margin:8px 0 12px}
+.timeline p,.timeline ul{font-size:16px;line-height:1.8;color:#596579}
+.timeline ul{padding-left:20px}
+.timeline aside{background:var(--soft);padding:18px 20px;font-size:14px;line-height:1.7}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
+.pills span{border:1px solid #526078;border-radius:30px;padding:9px 14px;font-size:13px;color:#e5eaf1}
+.button.outline{border:1px solid #8795a9;color:#fff}
+.books{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 26px}
+.books article img{width:100%;height:285px;object-fit:contain;background:#f3f4f5;padding:12px;margin-bottom:16px}
+.books label{font-size:10px}
+.books h3{font:800 18px/1.4 Manrope;margin:8px 0}
+.books p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+.note{font-size:14px;color:var(--muted);margin-top:32px}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}
+.topics span{font-size:14px;font-weight:700;padding:12px 0;border-bottom:1px solid var(--line)}
+.dark .topics span{border-color:#46536a}
+.contactcopy{font-size:17px;line-height:1.8;color:#c4cedb;max-width:480px}
+.contactbox{border:1px solid #526078;padding:34px}
+.contactbox label{font-size:11px;font-weight:800;letter-spacing:2px;color:#e0ad75}
+.email{display:block;font:800 clamp(22px,2.5vw,30px) Manrope;margin:16px 0 26px;overflow-wrap:anywhere}
+.contactbox p{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #46536a;padding:14px 0;margin:0;font-size:14px}
+.contactbox p span,.contactbox p a{color:#d7dee8}
+footer{background:#0b1628;color:#b7c1cf;padding:26px 0}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.foot b{font:800 13px Manrope;color:#fff;letter-spacing:1px}
+.foot span,.foot small{font-size:12px}
+@media(max-width:950px){
+ .header{padding:0 24px}.header nav{gap:15px}
+ .hero-banner,.hero-banner>img{min-height:520px}
+ .hero-content{right:4%;width:58%}
+ .hero h1{font-size:clamp(46px,6vw,64px)}
+ .twocol{gap:42px}.timeline article{grid-template-columns:165px 1fr;gap:28px}
+ .books{grid-template-columns:repeat(3,1fr)}
 }
-@media (max-width:650px) {
-  body { font-size:16px; line-height:1.75; }
-  .container { width:calc(100% - 40px); }
-  .header { height:70px; min-height:70px; padding:0 20px; }
-  .brand { font-size:12px; letter-spacing:1px; }
-  .brand b { padding:9px; font-size:13px; }
-  .toggle { display:block; border:1px solid #dce1e7; border-radius:5px; padding:7px 11px; color:#17243a; font-size:23px; line-height:1; }
-  .header nav { display:none; position:absolute; top:70px; left:0; right:0; background:#fff; padding:12px 20px 18px; box-shadow:0 12px 24px #15243a20; flex-direction:column; align-items:stretch; gap:0; }
-  .header nav.open { display:flex; }
-  .header nav a { padding:13px 8px; border-bottom:1px solid #edf0f3; font-size:15px; }
-  .header nav .navcta { border:0; padding:13px 8px; }
-  .hero-banner { min-height:0; background:var(--psf-navy); }
-  .hero-banner>img { width:100%; height:auto; min-height:0; aspect-ratio:3 / 1; object-fit:cover; object-position:22% center; }
-  .hero-content { position:relative; top:auto; right:auto; transform:none; width:100%; padding:34px 22px 28px; background:var(--psf-navy); color:#fff; }
-  .hero .eyebrow { color:#e0ad75; font-size:11px; letter-spacing:1.7px; margin-bottom:16px; }
-  .hero h1 { color:#fff; font-size:clamp(42px,11vw,56px); line-height:1.08; letter-spacing:-2px; margin-bottom:18px; }
-  .hero h1 em { color:#e0ad75; }
-  .hero .sub { color:#e1e7ef; font-size:15px; line-height:1.7; }
-  .hero .sub i { margin:0 5px; }
-  .hero-copy { color:#c4cedb; font-size:16px; line-height:1.75; margin:20px 0 24px; }
-  .hero-actions { gap:16px; align-items:flex-start; flex-direction:column; }
-  .hero .button { padding:14px 18px; font-size:14px; }
-  .hero .plainlink { color:#f1f4f8; font-size:14px; margin:0; }
-  .hero-foot { gap:12px 20px; margin-top:30px; padding-top:15px; border-color:#43516a; }
-  .hero-foot span { color:#aebacc; font-size:9px; letter-spacing:1px; }
-  .section { padding:76px 0; }
-  .eyebrow, .dark .eyebrow, .eyebrow.dark { font-size:11px; }
-  .twocol { grid-template-columns:1fr; gap:26px; }
-  .section h2 { font-size:clamp(35px,9vw,44px); line-height:1.13; letter-spacing:-1.5px; }
-  .copy { font-size:16px; }
-  .lead { font-size:19px; }
-  .under { font-size:14px; }
-  .stats { grid-template-columns:1fr 1fr; gap:22px 12px; margin-top:48px; padding-top:24px; }
-  .stats div { border:0; padding:0; align-items:flex-start; flex-direction:column; gap:4px; }
-  .stats strong { font-size:34px; }
-  .stats small { font-size:12px; }
-  .heading { display:block; margin-bottom:30px; }
-  .heading>p { font-size:15px; margin-top:14px; }
-  .cards { grid-template-columns:1fr; }
-  .cards article { min-height:0; padding:23px; }
-  .cards b { margin:8px 0 14px; }
-  .cards h3 { font-size:19px; }
-  .cards p { font-size:15px; }
-  .timeline article { grid-template-columns:1fr; gap:9px; padding:27px 0; }
-  .timeline time { font-size:12px; }
-  .timeline h3 { font-size:20px; }
-  .timeline p, .timeline ul { font-size:15px; }
-  .books { grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 16px; }
-  .books article img { height:220px; padding:8px; }
-  .books label { font-size:9px; line-height:1.5; }
-  .books h3 { font-size:15px; }
-  .books p { font-size:13px; }
-  .note { font-size:13px; line-height:1.7; }
-  .topics { grid-template-columns:1fr; gap:8px; }
-  .topics span { font-size:14px; }
-  .contactcopy { font-size:16px; }
-  .contactbox { padding:24px 18px; }
-  .email { font-size:clamp(18px,5vw,23px); overflow-wrap:anywhere; }
-  .contactbox p { align-items:flex-start; flex-direction:column; gap:4px; font-size:13px; }
-  .foot { align-items:flex-start; flex-direction:column; gap:10px; }
-  .foot b { font-size:12px; }
-  .foot span, .foot small { font-size:11px; line-height:1.6; }
+@media(max-width:680px){
+ body{font-size:16px;line-height:1.75}
+ .container{width:calc(100% - 40px)}
+ .header{height:70px;padding:0 20px}
+ .brand{font-size:12px;letter-spacing:.8px;gap:9px}
+ .brand b{width:39px;height:39px;font-size:13px}
+ .toggle{display:block}
+ .header nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;padding:10px 20px 18px;box-shadow:0 12px 24px #15243a20;flex-direction:column;align-items:stretch;gap:0}
+ .header nav.open{display:flex}
+ .header nav a{padding:13px 8px;border-bottom:1px solid #edf0f3;font-size:15px}
+ .header nav .navcta{border:0;padding:13px 8px}
+ .hero-banner{min-height:0;background:var(--navy)}
+ .hero-banner>img{width:100%;height:auto;min-height:0;aspect-ratio:3/1;object-fit:cover;object-position:22% center}
+ .hero-content{position:relative;top:auto;right:auto;transform:none;width:100%;padding:34px 22px 28px;background:var(--navy);color:#fff}
+ .hero .eyebrow{color:#e0ad75;font-size:10px;letter-spacing:1.5px;margin-bottom:15px}
+ .hero h1{font-size:clamp(39px,10.5vw,54px);line-height:1.1;letter-spacing:-1.8px;color:#fff;margin-bottom:18px}
+ .hero h1 em{color:#e0ad75}
+ .sub{color:#e1e7ef;font-size:15px;line-height:1.75}
+ .sub i{margin:0 4px}
+ .hero-copy{color:#c4cedb;font-size:16px;line-height:1.8;margin:20px 0 24px}
+ .hero-actions{align-items:flex-start;flex-direction:column;gap:16px}
+ .button{padding:14px 18px;font-size:14px}
+ .plainlink{color:#f1f4f8;font-size:14px}
+ .hero-foot{gap:12px 18px;margin-top:28px;padding-top:15px;border-color:#43516a}
+ .hero-foot span{color:#aebacc;font-size:9px;letter-spacing:.8px}
+ .section{padding:72px 0}
+ .twocol{grid-template-columns:1fr;gap:25px}
+ h2{font-size:clamp(35px,9vw,44px);letter-spacing:-1.3px}
+ .copy{font-size:16px}.lead{font-size:19px}
+ .stats{grid-template-columns:1fr 1fr;gap:22px 12px;margin-top:48px;padding-top:24px}
+ .stats div{display:flex;align-items:flex-start;flex-direction:column;gap:4px}
+ .stats strong{font-size:34px}.stats small{font-size:12px}
+ .heading{display:block;margin-bottom:30px}
+ .heading>p{font-size:15px;margin-top:14px}
+ .cards{grid-template-columns:1fr}
+ .cards article{min-height:0;padding:23px}
+ .cards h3{font-size:19px}.cards p{font-size:15px}
+ .timeline article{grid-template-columns:1fr;gap:8px;padding:26px 0}
+ .timeline h3{font-size:20px}.timeline p,.timeline ul{font-size:15px}
+ .books{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 15px}
+ .books article img{height:210px;padding:8px}
+ .books h3{font-size:15px}.books p{font-size:13px}
+ .topics{grid-template-columns:1fr;gap:8px}
+ .contactbox{padding:23px 17px}
+ .email{font-size:clamp(20px,5.5vw,25px)}
+ .contactbox p{align-items:flex-start;flex-direction:column;gap:3px;font-size:13px}
+ .foot{align-items:flex-start;flex-direction:column;gap:8px}
+ .foot span,.foot small{font-size:11px;line-height:1.6}
 }
-@media (max-width:380px) {
-  .container { width:calc(100% - 32px); }
-  .hero-content { padding-left:18px; padding-right:18px; }
-  .hero h1 { font-size:40px; }
-  .books article img { height:190px; }
-  .books h3 { font-size:14px; }
+@media(max-width:380px){
+ .container{width:calc(100% - 32px)}
+ .hero-content{padding-left:18px;padding-right:18px}
+ .hero h1{font-size:39px}
+ .books article img{height:185px}
 }
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
-</head><body>
-<header class="header"><a class="brand" href="#home"><b>PSF</b> PAULUS S. FIRMANTO</a>
-<button class="toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-<nav><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#books">Books</a><a href="#perspective">Perspective</a><a class="navcta" href="#contact">Let's Connect ↗</a></nav></header>
+</head>
+<body>
+<header class="header">
+ <a class="brand" href="#home"><b>PSF</b> PAULUS S. FIRMANTO</a>
+ <button class="toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+ <nav aria-label="Main navigation">
+  <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#books">Books</a><a href="#perspective">Perspective</a><a class="navcta" href="#contact">Let's Connect ↗</a>
+ </nav>
+</header>
 <main>
 <section class="hero" id="home">
-  <div class="hero-banner">
-    <img src="assets/banner_website.png" alt="Paulus S. Firmanto — professional banner">
-    <div class="hero-content">
-      <p class="eyebrow">BUSINESS LEADER · STRATEGIC ADVISOR · AUTHOR</p>
-      <h1>Building businesses<br><em>that move forward.</em></h1>
-      <p class="sub">Automotive &amp; Mobility <i>•</i> Business Transformation <i>•</i> Distribution Strategy</p>
-      <p class="hero-copy">More than 30 years of experience connecting market understanding, commercial strategy, organizational capability, and disciplined execution to build sustainable business growth.</p>
-      <div class="hero-actions">
-        <a class="button light" href="#experience">Explore my journey ↘</a>
-        <a class="plainlink" href="#books">Discover my books ↗</a>
-      </div>
-      <div class="hero-foot"><span>JAKARTA, INDONESIA</span><span>30+ YEARS OF EXPERIENCE</span><span>7 PUBLISHED TITLES</span></div>
-    </div>
+ <div class="hero-banner">
+  <img src="assets/banner_website.png" alt="Paulus S. Firmanto — professional banner">
+  <div class="hero-content">
+   <p class="eyebrow">BUSINESS LEADER · STRATEGIC ADVISOR · AUTHOR</p>
+   <h1>Building businesses<br><em>that move forward.</em></h1>
+   <p class="sub">Automotive &amp; Mobility <i>•</i> Business Transformation <i>•</i> Distribution Strategy</p>
+   <p class="hero-copy">More than 30 years of experience connecting market understanding, commercial strategy, organizational capability, and disciplined execution to build sustainable business growth.</p>
+   <div class="hero-actions"><a class="button light" href="#experience">Explore my journey ↘</a><a class="plainlink" href="#books">Discover my books ↗</a></div>
+   <div class="hero-foot"><span>JAKARTA, INDONESIA</span><span>30+ YEARS OF EXPERIENCE</span><span>7 FEATURED BOOK TITLES</span></div>
   </div>
+ </div>
 </section>
-<section class="section" id="about"><div class="container twocol"><div><p class="eyebrow dark">01 / ABOUT</p><h2>Experience across<br><em>markets and transformation.</em></h2></div><div class="copy"><p class="lead">I am a business leader and strategic advisor with a career spanning Indonesia's automotive, distribution, and business development sectors.</p><p>My professional journey includes senior leadership roles at Yamaha Motor Indonesia and Suzuki Indomobil Sales, entrepreneurial leadership, and advisory work with business owners and leadership teams.</p><p>I focus on understanding the real condition of a business, identifying the levers that matter, and translating strategy into practical action — with sustainable profitability as the destination.</p><a class="under" href="#contact">Start a conversation ↗</a></div></div>
-<div class="container stats"><div><strong>30+</strong><small>Years in business<br>& automotive</small></div><div><strong>1,000+</strong><small>Dealer & distribution<br>partners developed</small></div><div><strong>7</strong><small>Published book titles<br>featured here</small></div><div><strong>3</strong><small>Core arenas: strategy,<br>mobility & transformation</small></div></div></section>
-<section class="section soft" id="expertise"><div class="container"><p class="eyebrow dark">02 / WHAT I BRING</p><div class="heading"><h2>Turning insight<br><em>into business momentum.</em></h2><p>Connecting commercial ambition with the capabilities, partnerships, and execution needed to make it happen.</p></div><div class="cards">
-<article><small>01</small><b>↗</b><h3>Business Strategy & Market Development</h3><p>Market positioning, growth opportunities, go-to-market strategy, and business model development.</p></article>
-<article><small>02</small><b>◎</b><h3>Sales, Marketing & Commercial Leadership</h3><p>Commercial planning, budget management, sales effectiveness, and market execution.</p></article>
-<article><small>03</small><b>⌘</b><h3>Distribution & Network Development</h3><p>Dealer ecosystems, channel productivity, partner development, and distribution transformation.</p></article>
-<article><small>04</small><b>⌁</b><h3>Business Transformation & Turnaround</h3><p>Business health assessment, revenue and margin improvement, financial discipline, and practical roadmaps.</p></article>
-<article><small>05</small><b>◇</b><h3>Strategic Partnerships & Ecosystems</h3><p>Building productive collaboration among principals, distributors, dealers, financiers, and service partners.</p></article>
-<article><small>06</small><b>✳</b><h3>Organization & People Development</h3><p>Leadership development, capability building, mentoring, and customer-community engagement.</p></article>
-</div></div></section>
-<section class="section" id="experience"><div class="container"><p class="eyebrow dark">03 / PROFESSIONAL JOURNEY</p><div class="heading"><h2>Leadership shaped<br><em>by real markets.</em></h2><p>Progressive roles across sales, marketing, distribution, and business advisory.</p></div><div class="timeline">
-<article><time>2012 — PRESENT</time><div><label>AIS TRAINING & CONSULTING</label><h3>Founder & Commissioner / Senior Business Advisor</h3><p>Founded a business advisory and transformation practice supporting business owners and leadership teams across automotive, distribution, and related sectors.</p><ul><li>Provide strategic oversight and business advisory.</li><li>Assess business health through integrated financial and commercial analysis.</li><li>Identify opportunities for revenue, margin, and profitability improvement.</li><li>Support transformation and turnaround initiatives through practical execution roadmaps.</li><li>Develop market expansion strategies and strategic partnership frameworks.</li></ul></div></article>
-<article><time>2015 — 2025<br><small>Concurrent role</small></time><div><label>DIGITAL PROMOTION AGENCY</label><h3>Chief Executive Officer</h3><p>Led business operations and commercial growth initiatives focused on revenue generation, client acquisition, and channel productivity.</p><ul><li>Supported client revenue growth of 15–30% through improved commercial execution and channel productivity.</li><li>Developed multi-channel go-to-market strategies and reseller ecosystems.</li><li>Managed cross-functional teams across sales, marketing, and partnerships.</li></ul></div></article>
-<article><time>2011 — 2012</time><div><label>SUZUKI INDOMOBIL SALES</label><h3>Director of Sales & Marketing</h3><p>Led national sales and marketing strategy, budget management, commercial planning, and sales execution.</p><ul><li>Contributed to implementation of a direct distribution strategy at national level.</li><li>Strengthened market execution and regional alignment.</li><li>Involved in product development and distribution-system transformation.</li></ul></div></article>
-<article><time>1993 — 2011</time><div><label>YAMAHA MOTOR INDONESIA</label><h3>General Manager Marketing & Community Management<br><small>Previously: Head of Regional Sales</small></h3><p>Held progressive leadership responsibilities in regional sales, national marketing, dealer network development, and community management.</p><ul><li>Led national marketing strategy, brand positioning, and market development initiatives.</li><li>Managed marketing budget and commercial performance.</li><li>Led multi-region sales operations and helped develop a nationwide dealer network exceeding 1,000 partners.</li><li>Developed community engagement initiatives as part of brand development.</li></ul><aside><b>Strategic Project · 2003</b><br>Project Leader for Yamaha's first Flagship Shop in Semarang. The concept was subsequently expanded to Jakarta, Bandung, and Bali as a retail and aftersales study center.</aside></div></article>
-<article><time>1990 — 1993</time><div><label>EARLY CAREER</label><h3>Building the foundations</h3><p><b>Sales Engineer</b> — PT Friassha (1991–1993)<br><b>Parts Analyst</b> — United Tractors (1990–1991)</p></div></article>
-</div></div></section>
-<section class="section dark"><div class="container twocol"><div><p class="eyebrow">04 / INDUSTRY PERSPECTIVE</p><h2>Mobility is more<br>than the vehicle.<br><em>It is the ecosystem.</em></h2></div><div class="copy"><p class="lead">The future of mobility will be shaped by how well the entire business system works together.</p><p>From demand-driven distribution and customer experience to aftersales, parts, financing, charging, and retention, sustainable growth depends on a connected ecosystem and capable partners.</p><div class="pills"><span>Demand-driven distribution</span><span>Principal–dealer partnership</span><span>Digital + physical experience</span><span>Aftersales & retention</span><span>EV ecosystem development</span></div><a class="button outline" href="#contact">Discuss a mobility opportunity ↗</a></div></div></section>
-<section class="section" id="books"><div class="container"><p class="eyebrow dark">05 / BOOKS & WRITING</p><div class="heading"><h2>Ideas worth<br><em>putting into practice.</em></h2><p>Books on business, automotive, leadership, selling, career development, and personal growth.</p></div><div class="books">
-<article><img src="assets/arsitektur-industri-roda-dua-indonesia.png" alt="Arsitektur Industri Roda Dua Indonesia"><label>AUTOMOTIVE & BUSINESS</label><h3>Arsitektur Industri Roda Dua Indonesia</h3><p>Membaca Pasar, Mengelola Risiko, dan Bertahan di Tengah Perubahan.</p></article>
-<article><img src="assets/the-power-of-selling.jpg" alt="The Power of Selling"><label>SALES</label><h3>The Power of Selling</h3><p>From Zero to Sales Hero.</p></article>
-<article><img src="assets/kerja-happy-hidup-tenang.jpg" alt="Kerja Happy Hidup Tenang"><label>PERSONAL DEVELOPMENT</label><h3>Kerja Happy Hidup Tenang</h3><p>Cara Cerdas Atasi Stress.</p></article>
-<article><img src="assets/mengubah-percakapan-mengubah-karir.jpeg" alt="Mengubah Percakapan Mengubah Karir"><label>CAREER & COMMUNICATION</label><h3>Mengubah Percakapan Mengubah Karir</h3><p>Communication as a catalyst for career development.</p></article>
-<article><img src="assets/pemimpin-bukan-boss.jpg" alt="Pemimpin Bukan Boss"><label>LEADERSHIP</label><h3>Pemimpin Bukan Boss</h3><p>Seni Memimpin di Era Modern.</p></article>
-<article><img src="assets/motivasi-tanpa-basa-basi.jpg" alt="Motivasi Tanpa Basa Basi"><label>PERSONAL DEVELOPMENT</label><h3>Motivasi Tanpa Basa Basi</h3><p>Motivation and personal effectiveness.</p></article>
-<article><img src="assets/cycle-of-life.jpg" alt="Cycle of Life"><label>BUSINESS TRANSFORMATION</label><h3>Cycle of Life</h3><p>Strategi Bertahan, Bertumbuh, dan Berevolusi di Setiap Tahap Kehidupan Usaha.</p></article>
-</div><p class="note">Seven published titles featured here are available through Gramedia print and online channels. Availability may vary by title and time.</p></div></section>
-<section class="section soft" id="perspective"><div class="container twocol"><div><p class="eyebrow dark">06 / THOUGHT LEADERSHIP</p><h2>Learning from the market.<br><em>Sharing what works.</em></h2></div><div class="copy"><p class="lead">A practical point of view shaped by decades of working with businesses, people, and changing markets.</p><p>My writing and mentoring explore how markets evolve, why distribution systems succeed or fail, how leaders build capable teams, and how businesses adapt through different stages of growth.</p><div class="topics"><span>01 / Market & mobility</span><span>02 / Business health & profitability</span><span>03 / Leadership & people</span><span>04 / Selling & customer engagement</span></div><p><b>Trainer & Mentor — MACC Institute</b><br>PT Humani Santika Indonesia · Mentoring senior professionals in leadership transition, advisory, and consulting capabilities.</p></div></div></section>
-<section class="section dark" id="contact"><div class="container twocol"><div><p class="eyebrow">LET'S CONNECT</p><h2>Good conversations<br>create <em>new possibilities.</em></h2><p class="contactcopy">For strategic advisory, business transformation, speaking, mentoring, or collaboration opportunities.</p></div><div class="contactbox"><label>GET IN TOUCH</label><a class="email" href="mailto:psfirmanto@gmail.com">psfirmanto@gmail.com ↗</a><p>PHONE <a href="tel:+6287784888688">+62 877 8488 8688</a></p><p>LINKEDIN <a href="https://www.linkedin.com/in/psfirmanto/" target="_blank" rel="noopener">linkedin.com/in/psfirmanto ↗</a></p><p>LOCATION <span>Jakarta, Indonesia</span></p></div></div></section>
-</main><footer><div class="container foot"><b>PSF · PAULUS S. FIRMANTO</b><span>Building Markets. Strengthening Organizations. Driving Sustainable Profitability.</span><small>© <span id="year"></span> Paulus S. Firmanto. All rights reserved.</small></div></footer>
-<script src="script.js"></script></body></html>
+<section class="section" id="about">
+ <div class="container twocol">
+  <div><p class="eyebrow">01 / ABOUT</p><h2>Experience across<br><em>markets and transformation.</em></h2></div>
+  <div class="copy"><p class="lead">I am a business leader and strategic advisor with a career spanning Indonesia's automotive, distribution, and business development sectors.</p><p>My professional journey includes senior leadership roles at Yamaha Motor Indonesia and Suzuki Indomobil Sales, entrepreneurial leadership, and advisory work with business owners and leadership teams.</p><p>I focus on understanding the real condition of a business, identifying the levers that matter, and translating strategy into practical action — with sustainable profitability as the destination.</p><a class="under" href="#contact">Start a conversation ↗</a></div>
+ </div>
+ <div class="container stats">
+  <div><strong>30+</strong><small>Years in business<br>&amp; automotive</small></div><div><strong>1,000+</strong><small>Dealer &amp; distribution<br>partners developed</small></div><div><strong>7</strong><small>Book titles<br>featured here</small></div><div><strong>3</strong><small>Core arenas: strategy,<br>mobility &amp; transformation</small></div>
+ </div>
+</section>
+<section class="section soft" id="expertise">
+ <div class="container"><p class="eyebrow">02 / WHAT I BRING</p><div class="heading"><h2>Turning insight<br><em>into business momentum.</em></h2><p>Connecting commercial ambition with the capabilities, partnerships, and execution needed to make it happen.</p></div>
+  <div class="cards">
+   <article><small>01</small><b>↗</b><h3>Business Strategy &amp; Market Development</h3><p>Market positioning, growth opportunities, go-to-market strategy, and business model development.</p></article>
+   <article><small>02</small><b>◎</b><h3>Sales, Marketing &amp; Commercial Leadership</h3><p>Commercial planning, budget management, sales effectiveness, and market execution.</p></article>
+   <article><small>03</small><b>⌘</b><h3>Distribution &amp; Network Development</h3><p>Dealer ecosystems, channel productivity, partner development, and distribution transformation.</p></article>
+   <article><small>04</small><b>⌁</b><h3>Business Transformation &amp; Turnaround</h3><p>Business health assessment, revenue and margin improvement, financial discipline, and practical roadmaps.</p></article>
+   <article><small>05</small><b>◇</b><h3>Strategic Partnerships &amp; Ecosystems</h3><p>Building productive collaboration among principals, distributors, dealers, financiers, and service partners.</p></article>
+   <article><small>06</small><b>✳</b><h3>Organization &amp; People Development</h3><p>Leadership development, capability building, mentoring, and customer-community engagement.</p></article>
+  </div>
+ </div>
+</section>
+<section class="section" id="experience">
+ <div class="container"><p class="eyebrow">03 / PROFESSIONAL JOURNEY</p><div class="heading"><h2>Leadership shaped<br><em>by real markets.</em></h2><p>Progressive roles across sales, marketing, distribution, and business advisory.</p></div>
+  <div class="timeline">
+   <article><time>2012 — PRESENT</time><div><label>AIS TRAINING &amp; CONSULTING</label><h3>Founder &amp; Commissioner / Senior Business Advisor</h3><p>Founded a business advisory and transformation practice supporting business owners and leadership teams across automotive, distribution, and related sectors.</p><ul><li>Provide strategic oversight and business advisory.</li><li>Assess business health through integrated financial and commercial analysis.</li><li>Identify opportunities for revenue, margin, and profitability improvement.</li><li>Support transformation and turnaround initiatives through practical execution roadmaps.</li><li>Develop market expansion strategies and strategic partnership frameworks.</li></ul></div></article>
+   <article><time>2015 — 2025<br><small>Concurrent role</small></time><div><label>DIGITAL PROMOTION AGENCY</label><h3>Chief Executive Officer</h3><p>Led business operations and commercial growth initiatives focused on revenue generation, client acquisition, and channel productivity.</p><ul><li>Supported client revenue growth of 15–30% through improved commercial execution and channel productivity.</li><li>Developed multi-channel go-to-market strategies and reseller ecosystems.</li><li>Managed cross-functional teams across sales, marketing, and partnerships.</li></ul></div></article>
+   <article><time>2011 — 2012</time><div><label>SUZUKI INDOMOBIL SALES</label><h3>Director of Sales &amp; Marketing</h3><p>Led national sales and marketing strategy, budget management, commercial planning, and sales execution.</p><ul><li>Contributed to implementation of a direct distribution strategy at national level.</li><li>Strengthened market execution and regional alignment.</li><li>Involved in product development and distribution-system transformation.</li></ul></div></article>
+   <article><time>1993 — 2011</time><div><label>YAMAHA MOTOR INDONESIA</label><h3>General Manager Marketing &amp; Community Management<br><small>Previously: Head of Regional Sales</small></h3><p>Held progressive leadership responsibilities in regional sales, national marketing, dealer network development, and community management.</p><ul><li>Led national marketing strategy, brand positioning, and market development initiatives.</li><li>Managed marketing budget and commercial performance.</li><li>Led multi-region sales operations and helped develop a nationwide dealer network exceeding 1,000 partners.</li><li>Developed community engagement initiatives as part of brand development.</li></ul><aside><b>Strategic Project · 2003</b><br>Project Leader for Yamaha's first Flagship Shop in Semarang. The concept was subsequently expanded to Jakarta, Bandung, and Bali as a retail and aftersales study center.</aside></div></article>
+   <article><time>1990 — 1993</time><div><label>EARLY CAREER</label><h3>Building the foundations</h3><p><b>Sales Engineer</b> — PT Friassha (1991–1993)<br><b>Parts Analyst</b> — United Tractors (1990–1991)</p></div></article>
+  </div>
+ </div>
+</section>
+<section class="section dark" id="mobility">
+ <div class="container twocol"><div><p class="eyebrow">04 / INDUSTRY PERSPECTIVE</p><h2>Mobility is more<br>than the vehicle.<br><em>It is the ecosystem.</em></h2></div><div class="copy"><p class="lead">The future of mobility will be shaped by how well the entire business system works together.</p><p>From demand-driven distribution and customer experience to aftersales, parts, financing, charging, and retention, sustainable growth depends on a connected ecosystem and capable partners.</p><div class="pills"><span>Demand-driven distribution</span><span>Principal–dealer partnership</span><span>Digital + physical experience</span><span>Aftersales &amp; retention</span><span>EV ecosystem development</span></div><a class="button outline" href="#contact">Discuss a mobility opportunity ↗</a></div></div>
+</section>
+<section class="section" id="books">
+ <div class="container"><p class="eyebrow">05 / BOOKS &amp; WRITING</p><div class="heading"><h2>Ideas worth<br><em>putting into practice.</em></h2><p>Books on business, automotive, leadership, selling, career development, and personal growth.</p></div>
+  <div class="books">
+   <article><img src="assets/arsitektur-industri-roda-dua-indonesia.png" alt="Arsitektur Industri Roda Dua Indonesia"><label>AUTOMOTIVE &amp; BUSINESS</label><h3>Arsitektur Industri Roda Dua Indonesia</h3><p>Membaca Pasar, Mengelola Risiko, dan Bertahan di Tengah Perubahan.</p></article>
+   <article><img src="assets/the-power-of-selling.jpg" alt="The Power of Selling"><label>SALES</label><h3>The Power of Selling</h3><p>From Zero to Sales Hero.</p></article>
+   <article><img src="assets/kerja-happy-hidup-tenang.jpg" alt="Kerja Happy Hidup Tenang"><label>PERSONAL DEVELOPMENT</label><h3>Kerja Happy Hidup Tenang</h3><p>Cara Cerdas Atasi Stress.</p></article>
+   <article><img src="assets/mengubah-percakapan-mengubah-karir.jpeg" alt="Mengubah Percakapan Mengubah Karir"><label>CAREER &amp; COMMUNICATION</label><h3>Mengubah Percakapan Mengubah Karir</h3><p>Communication as a catalyst for career development.</p></article>
+   <article><img src="assets/pemimpin-bukan-boss.jpg" alt="Pemimpin Bukan Boss"><label>LEADERSHIP</label><h3>Pemimpin Bukan Boss</h3><p>Seni Memimpin di Era Modern.</p></article>
+   <article><img src="assets/motivasi-tanpa-basa-basi.jpg" alt="Motivasi Tanpa Basa Basi"><label>PERSONAL DEVELOPMENT</label><h3>Motivasi Tanpa Basa Basi</h3><p>Motivation and personal effectiveness.</p></article>
+   <article><img src="assets/cycle-of-life.jpg" alt="Cycle of Life"><label>BUSINESS TRANSFORMATION</label><h3>Cycle of Life</h3><p>Strategi Bertahan, Bertumbuh, dan Berevolusi di Setiap Tahap Kehidupan Usaha.</p></article>
+  </div>
+  <p class="note">Seven featured titles are presented here. Availability may vary by title and sales channel.</p>
+ </div>
+</section>
+<section class="section soft" id="perspective">
+ <div class="container twocol"><div><p class="eyebrow">06 / THOUGHT LEADERSHIP</p><h2>Learning from the market.<br><em>Sharing what works.</em></h2></div><div class="copy"><p class="lead">A practical point of view shaped by decades of working with businesses, people, and changing markets.</p><p>My writing and mentoring explore how markets evolve, why distribution systems succeed or fail, how leaders build capable teams, and how businesses adapt through different stages of growth.</p><div class="topics"><span>01 / Market &amp; mobility</span><span>02 / Business health &amp; profitability</span><span>03 / Leadership &amp; people</span><span>04 / Selling &amp; customer engagement</span></div><p><b>Trainer &amp; Mentor — MACC Institute</b><br>PT Humani Santika Indonesia · Mentoring senior professionals in leadership transition, advisory, and consulting capabilities.</p></div></div>
+</section>
+<section class="section dark" id="contact">
+ <div class="container twocol"><div><p class="eyebrow">LET'S CONNECT</p><h2>Good conversations<br>create <em>new possibilities.</em></h2><p class="contactcopy">For strategic advisory, business transformation, speaking, mentoring, or collaboration opportunities.</p></div><div class="contactbox"><label>GET IN TOUCH</label><a class="email" href="mailto:psfirmanto@gmail.com">psfirmanto@gmail.com ↗</a><p>PHONE <a href="tel:+6287784888688">+62 877 8488 8688</a></p><p>LINKEDIN <a href="https://www.linkedin.com/in/psfirmanto/" target="_blank" rel="noopener">linkedin.com/in/psfirmanto ↗</a></p><p>LOCATION <span>Jakarta, Indonesia</span></p></div></div>
+</section>
+</main>
+<footer><div class="container foot"><b>PSF · PAULUS S. FIRMANTO</b><span>Building Markets. Strengthening Organizations. Driving Sustainable Profitability.</span><small>© <span id="year"></span> Paulus S. Firmanto. All rights reserved.</small></div></footer>
+<script>
+const menuButton=document.querySelector(".toggle");
+const navigation=document.querySelector(".header nav");
+menuButton.addEventListener("click",()=>{const isOpen=navigation.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(isOpen));menuButton.setAttribute("aria-label",isOpen?"Close navigation":"Open navigation");menuButton.textContent=isOpen?"×":"☰";});
+navigation.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{navigation.classList.remove("open");menuButton.setAttribute("aria-expanded","false");menuButton.setAttribute("aria-label","Open navigation");menuButton.textContent="☰";}));
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
