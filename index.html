@@ -72,11 +72,15 @@ h2{font:800 clamp(40px,4.2vw,60px)/1.12 Manrope,sans-serif;letter-spacing:-2px;m
 .pills{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0}
 .pills span{border:1px solid #526078;border-radius:30px;padding:9px 14px;font-size:13px;color:#e5eaf1}
 .button.outline{border:1px solid #8795a9;color:#fff}
-.books{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 26px}
-.books article img{width:100%;height:285px;object-fit:contain;background:#f3f4f5;padding:12px;margin-bottom:16px}
+.books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.books article{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;align-items:start;background:#fff;border:1px solid var(--line);padding:22px;min-width:0}
+.books article img{width:100%;height:230px;object-fit:contain;background:#f3f4f5;padding:10px;margin:0}
+.books .book-copy{min-width:0}
 .books label{font-size:10px}
-.books h3{font:800 18px/1.4 Manrope;margin:8px 0}
-.books p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+.books h3{font:800 18px/1.4 Manrope;margin:8px 0 10px}
+.books .subtitle{font-size:13px;line-height:1.55;color:#9a6b3d;font-weight:700;margin:0 0 12px}
+.books p{font-size:14px;line-height:1.75;color:var(--muted);margin:0 0 12px}
+.books .takeaway{padding-top:11px;border-top:1px solid var(--line);color:var(--ink);font-weight:700;font-size:13px}
 .note{font-size:14px;color:var(--muted);margin-top:32px}
 .topics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}
 .topics span{font-size:14px;font-weight:700;padding:12px 0;border-bottom:1px solid var(--line)}
@@ -138,9 +142,11 @@ footer{background:#0b1628;color:#b7c1cf;padding:26px 0}
  .cards h3{font-size:19px}.cards p{font-size:15px}
  .timeline article{grid-template-columns:1fr;gap:8px;padding:26px 0}
  .timeline h3{font-size:20px}.timeline p,.timeline ul{font-size:15px}
- .books{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 15px}
- .books article img{height:210px;padding:8px}
- .books h3{font-size:15px}.books p{font-size:13px}
+ .books{grid-template-columns:1fr;gap:18px}
+ .books article{grid-template-columns:116px minmax(0,1fr);gap:16px;padding:16px}
+ .books article img{height:175px;padding:7px}
+ .books h3{font-size:16px}.books p{font-size:13px;line-height:1.7}
+ .books .subtitle{font-size:12px}.books .takeaway{font-size:12px}
  .topics{grid-template-columns:1fr;gap:8px}
  .contactbox{padding:23px 17px}
  .email{font-size:clamp(20px,5.5vw,25px)}
@@ -217,13 +223,48 @@ footer{background:#0b1628;color:#b7c1cf;padding:26px 0}
 <section class="section" id="books">
  <div class="container"><p class="eyebrow">05 / BOOKS &amp; WRITING</p><div class="heading"><h2>Ideas worth<br><em>putting into practice.</em></h2><p>Books on business, automotive, leadership, selling, career development, and personal growth.</p></div>
   <div class="books">
-   <article><img src="assets/arsitektur-industri-roda-dua-indonesia.png" alt="Arsitektur Industri Roda Dua Indonesia"><label>AUTOMOTIVE &amp; BUSINESS</label><h3>Arsitektur Industri Roda Dua Indonesia</h3><p>Membaca Pasar, Mengelola Risiko, dan Bertahan di Tengah Perubahan.</p></article>
-   <article><img src="assets/the-power-of-selling.jpg" alt="The Power of Selling"><label>SALES</label><h3>The Power of Selling</h3><p>From Zero to Sales Hero.</p></article>
-   <article><img src="assets/kerja-happy-hidup-tenang.jpg" alt="Kerja Happy Hidup Tenang"><label>PERSONAL DEVELOPMENT</label><h3>Kerja Happy Hidup Tenang</h3><p>Cara Cerdas Atasi Stress.</p></article>
-   <article><img src="assets/mengubah-percakapan-mengubah-karir.jpeg" alt="Mengubah Percakapan Mengubah Karir"><label>CAREER &amp; COMMUNICATION</label><h3>Mengubah Percakapan Mengubah Karir</h3><p>Communication as a catalyst for career development.</p></article>
-   <article><img src="assets/pemimpin-bukan-boss.jpg" alt="Pemimpin Bukan Boss"><label>LEADERSHIP</label><h3>Pemimpin Bukan Boss</h3><p>Seni Memimpin di Era Modern.</p></article>
-   <article><img src="assets/motivasi-tanpa-basa-basi.jpg" alt="Motivasi Tanpa Basa Basi"><label>PERSONAL DEVELOPMENT</label><h3>Motivasi Tanpa Basa Basi</h3><p>Motivation and personal effectiveness.</p></article>
-   <article><img src="assets/cycle-of-life.jpg" alt="Cycle of Life"><label>BUSINESS TRANSFORMATION</label><h3>Cycle of Life</h3><p>Strategi Bertahan, Bertumbuh, dan Berevolusi di Setiap Tahap Kehidupan Usaha.</p></article>
+   <article>
+    <img src="assets/arsitektur-industri-roda-dua-indonesia.png" alt="Arsitektur Industri Roda Dua Indonesia">
+    <div class="book-copy"><label>AUTOMOTIVE &amp; BUSINESS</label><h3>Arsitektur Industri Roda Dua Indonesia</h3><p class="subtitle">Membaca Pasar, Mengelola Risiko, dan Bertahan di Tengah Perubahan</p>
+     <p>Pasar sepeda motor Indonesia sangat besar, tetapi keberhasilan tidak cukup ditentukan oleh produk. Buku ini membahas karakter konsumen, perbedaan cluster pasar, strategi produk dan komunikasi, pembiayaan, distribusi, jaringan dealer, aftersales, hingga transisi motor listrik. Berangkat dari pengalaman lebih dari tiga dekade di industri otomotif, buku ini membantu pelaku industri memahami hubungan antarelemen yang menentukan kesehatan ekosistem.</p>
+     <p class="takeaway">Pertumbuhan yang sehat dimulai dari kemampuan membaca pasar dan mengelola risiko, bukan sekadar mengejar volume.</p></div>
+   </article>
+   <article>
+    <img src="assets/the-power-of-selling.jpg" alt="The Power of Selling">
+    <div class="book-copy"><label>SALES &amp; CAREER DEVELOPMENT</label><h3>The Power of Selling</h3><p class="subtitle">From Zero to Sales Hero · 19 Kunci Sukses Meraih Puncak Karir</p>
+     <p>Melalui perjalanan Joko, seorang pemuda yang awalnya tidak bercita-cita menjadi salesman, buku ini menunjukkan bagaimana dunia penjualan dapat menjadi jalan untuk membangun karakter dan karier. Pembaca diajak mempelajari mindset positif, menghadapi penolakan, memahami kebutuhan pelanggan, melakukan presentasi, serta mengembangkan komunikasi dan negosiasi. Perjalanan berlanjut dari salesman menjadi supervisor hingga manajer, dengan pembahasan coaching, strategi, dan kepemimpinan tim.</p>
+     <p class="takeaway">Sales bukan sekadar menjual produk, tetapi membangun kemampuan dan membuka peluang karier.</p></div>
+   </article>
+   <article>
+    <img src="assets/kerja-happy-hidup-tenang.jpg" alt="Kerja Happy Hidup Tenang">
+    <div class="book-copy"><label>PERSONAL DEVELOPMENT</label><h3>Kerja Happy, Hidup Tenang</h3><p class="subtitle">Cara Cerdas Atasi Stres di Kantor</p>
+     <p>Deadline, tuntutan atasan, tekanan pekerjaan, dan hubungan dengan rekan kerja merupakan bagian dari kehidupan profesional. Buku ini menawarkan cara yang lebih sehat untuk mengelola stres, mengatur waktu dan energi, membangun mindset positif, menghadapi konflik, serta menjaga keseimbangan kerja dan kehidupan pribadi. Dilengkapi cerita, checklist, dan langkah praktis yang dapat diterapkan oleh fresh graduate maupun profesional berpengalaman.</p>
+     <p class="takeaway">Tetap produktif itu penting, tanpa mengorbankan kebahagiaan dan kualitas hidup.</p></div>
+   </article>
+   <article>
+    <img src="assets/mengubah-percakapan-mengubah-karir.jpeg" alt="Mengubah Percakapan Mengubah Karir">
+    <div class="book-copy"><label>CAREER &amp; COMMUNICATION</label><h3>Mengubah Percakapan, Mengubah Karir</h3><p class="subtitle">Real Talk, Real Impact</p>
+     <p>Setiap percakapan dapat memengaruhi hubungan, kerja sama, dan perkembangan karier. Berdasarkan modul edukasi <i>Real Talk, Real Impact</i>, buku ini membahas cara menyampaikan kritik secara konstruktif, menerima feedback tanpa defensif, dan mengubah percakapan sulit menjadi kesempatan untuk belajar. Dengan bahasa ringan dan contoh situasi nyata, isinya relevan bagi manajer, karyawan, pemimpin komunitas, dan siapa saja yang ingin berkomunikasi lebih efektif.</p>
+     <p class="takeaway">Karier juga dibangun melalui cara kita berbicara, mendengarkan, dan terhubung dengan orang lain.</p></div>
+   </article>
+   <article>
+    <img src="assets/pemimpin-bukan-boss.jpg" alt="Pemimpin Bukan Boss">
+    <div class="book-copy"><label>LEADERSHIP</label><h3>Pemimpin Bukan Boss</h3><p class="subtitle">Seni Memimpin di Era Modern</p>
+     <p>Kepemimpinan sejati bukan tentang kekuasaan atau banyaknya perintah, melainkan kemampuan membangun kepercayaan, menginspirasi, memberdayakan tim, dan memberi teladan. Buku ini mengulas praktik kepemimpinan modern: komunikasi efektif, mengelola perubahan, delegasi, pengambilan keputusan, pengaruh positif, dan pola pikir strategis. Disampaikan secara praktis untuk siapa saja yang ingin mencapai target sekaligus menumbuhkan manusia dan tim.</p>
+     <p class="takeaway">Pemimpin sejati tidak hanya mengarahkan orang untuk bekerja, tetapi menginspirasi mereka untuk maju bersama.</p></div>
+   </article>
+   <article>
+    <img src="assets/motivasi-tanpa-basa-basi.jpg" alt="Motivasi Tanpa Basa Basi">
+    <div class="book-copy"><label>PEOPLE &amp; PERFORMANCE</label><h3>Motivasi Tanpa Basa Basi</h3><p class="subtitle">Membangun Motivasi yang Tahan Lama di Tempat Kerja</p>
+     <p>Apa yang membuat seseorang tetap bersemangat dan memberikan kontribusi terbaik? Buku ini mengajak pembaca melihat motivasi lebih dalam daripada sekadar hadiah dan hukuman. Dengan menggabungkan teori Maslow dan Herzberg, motivasi intrinsik dan ekstrinsik, serta pendekatan SMART Goals, buku ini memberi panduan bagi pemimpin dan manajer untuk membangun tujuan yang jelas, rasa dihargai, dan lingkungan kerja yang sehat.</p>
+     <p class="takeaway">Bangun lingkungan yang membuat orang ingin bertumbuh dan berkontribusi, bukan hanya bekerja lebih keras.</p></div>
+   </article>
+   <article>
+    <img src="assets/cycle-of-life.jpg" alt="Life Cycle of Business">
+    <div class="book-copy"><label>BUSINESS TRANSFORMATION</label><h3>Cycle of Life</h3><p class="subtitle">Life Cycle of Business · Seni Menjaga Bisnis agar Tak Pernah Mati</p>
+     <p>Bisnis, sebagaimana manusia, memiliki siklus kehidupan: lahir, bertumbuh, matang, hingga menghadapi risiko kemunduran. Berangkat dari pengalaman membangun bisnis sejak 2008 dan pembelajaran Business Mastery bersama Anthony Robbins, buku ini membantu pembaca mengenali fase usahanya, memperkuat fondasi, membangun sistem, mengembangkan tim, dan merespons perubahan. Ditujukan bagi pelaku UMKM, wirausaha, dan pemimpin bisnis.</p>
+     <p class="takeaway">Bisnis yang sehat tahu kapan harus bertumbuh, beradaptasi, dan bertransformasi.</p></div>
+   </article>
   </div>
   <p class="note">Seven featured titles are presented here. Availability may vary by title and sales channel.</p>
  </div>
